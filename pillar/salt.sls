@@ -11,6 +11,6 @@ salt:
             - 'git://github.com/saltstack-formulas/consul-formula.git'
 
         ext_pillar:
-          - git:
+          git:
             - 'file:///srv/git/system-config':
               - root: pillar
