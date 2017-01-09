@@ -14,4 +14,3 @@ salt:
             - git:
                 - 'file:///srv/git/system-config':
                     - root: pillar
-                - 'file:///srv/git/system-definition'
