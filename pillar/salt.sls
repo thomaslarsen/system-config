@@ -1,4 +1,4 @@
-{% from 'terraform/settings/zones.mtzo.json' import tf %}
+{% import_json "terraform/settings/zones.mtzo.json" as tf %}
 
 salt:
     master:
