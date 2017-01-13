@@ -8,7 +8,6 @@ salt:
             - 'file:///srv/git/system-definition':
                 - root: roots
             - 'file:///srv/salt_root/salt-formula'
-            - 'git://github.com/saltstack-formulas/consul-formula.git'
             - 'file:///srv/git/terraform':
                 - mountpoint: 'salt://terraform/settings'
 
