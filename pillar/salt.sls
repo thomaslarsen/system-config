@@ -1,5 +1,3 @@
-{% import_json 'terraform/config/zones/mtzo.json' as tf_config %}
-
 salt:
     master:
         autosign_file: '/etc/salt/autosign.conf'
