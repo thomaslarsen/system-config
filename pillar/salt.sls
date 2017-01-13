@@ -10,7 +10,7 @@ salt:
             - 'file:///srv/salt_root/salt-formula'
             - 'git://github.com/saltstack-formulas/consul-formula.git'
             - 'file:///srv/git/terraform':
-              - mountpoint: salt://terraform/config
+                - mountpoint: 'salt://terraform/config'
 
         ext_pillar:
             - git:
