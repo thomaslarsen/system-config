@@ -1,3 +1,4 @@
+
 salt:
     master:
         autosign_file: '/etc/salt/autosign.conf'
@@ -9,6 +10,9 @@ salt:
                 - root: roots
             - 'file:///srv/salt_root/salt-formula'
             - 'git://github.com/saltstack-formulas/consul-formula.git'
+            - 'file:///srv/git/terraform':
+              - root: config
+              - mountpoint: salt://terraform/config
 
         ext_pillar:
             - git:
