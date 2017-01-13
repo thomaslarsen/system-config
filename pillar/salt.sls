@@ -9,6 +9,7 @@ salt:
                 - root: roots
             - 'file:///srv/salt_root/salt-formula'
             - 'file:///srv/git/terraform':
+                - root: config
                 - mountpoint: 'salt://terraform/settings'
 
         ext_pillar:
