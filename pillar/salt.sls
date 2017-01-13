@@ -1,4 +1,4 @@
-{% import_json 'salt://terraform/config/zones/mtzo.json' as tf_config %}
+{% import_json 'terraform/config/zones/mtzo.json' as tf_config %}
 
 salt:
     master:
