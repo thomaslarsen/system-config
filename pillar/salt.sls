@@ -1,4 +1,4 @@
-{% import_json "terraform/settings/zones.mtzo.json" as tf %}
+{% from "tf.jinja" import tf_settings with context %}
 
 salt:
     master:
