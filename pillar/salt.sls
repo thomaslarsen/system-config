@@ -11,7 +11,6 @@ salt:
             - 'git://github.com/saltstack-formulas/consul-formula.git'
             - 'file:///srv/git/terraform':
                 - mountpoint: 'salt://terraform/settings'
-                - root: config
 
         ext_pillar:
             - git:
