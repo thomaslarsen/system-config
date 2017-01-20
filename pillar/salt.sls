@@ -10,8 +10,11 @@ salt:
             - 'file:///srv/git/system-definition':
                 - root: roots
             - 'file:///srv/salt_root/salt-formula'
-            - 'file:///srv/git/terraform':
-                - root: config
+
+        pillar_roots:
+          base:
+            - /srv/git/terraform/config/terraform
+
 
         ext_pillar:
             - git:
