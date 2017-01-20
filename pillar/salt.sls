@@ -18,6 +18,6 @@ salt:
                 - 'file:///srv/git/system-config':
                     - root: pillar
     minion:
-      id: {{ context.saltmaster_hostname }}
+      id: {{ tf_settings.saltmaster_hostname }}
       grains:
         role: salt::master
