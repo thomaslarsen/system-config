@@ -11,9 +11,6 @@ salt:
                 - root: roots
             - 'file:///srv/salt_root/salt-formula'
 
-        pillar_roots:
-            - /srv/git/resource-config
-
         ext_pillar:
             - git:
                 - 'file:///srv/git/resource-config':
