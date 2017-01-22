@@ -13,9 +13,10 @@ salt:
 
         pillar_roots:
             - /srv/git/resource-config
-            
+
         ext_pillar:
             - git:
+                - 'file:///srv/git/resource-config':
                 - 'file:///srv/git/system-config':
                     - root: pillar
     minion:
