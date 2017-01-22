@@ -1,0 +1,3 @@
+[submodule "pillar/config"]
+	path = pillar/config
+	url = /Users/thomaslarsen/git/resource-config
