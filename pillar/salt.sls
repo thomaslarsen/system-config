@@ -1,5 +1,3 @@
-{% from "tf.jinja" import tf_settings with context %}
-
 salt:
     master:
         autosign_file: '/etc/salt/autosign.conf'
