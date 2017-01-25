@@ -19,5 +19,6 @@ salt:
                     - root: pillar
     minion:
       id: {{ tf_settings.saltmaster_hostname }}
+      startup_states: highstate
       grains:
         role: salt::master
