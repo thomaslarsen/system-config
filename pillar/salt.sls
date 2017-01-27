@@ -1,4 +1,4 @@
-{% import_json "terraform/zones.mtzo.json" as tf_settings %}
+{% from "resourceConfig.jinja" import tf_settings with context %}
 
 salt:
     master:
@@ -18,7 +18,7 @@ salt:
                 - 'file:///srv/git/system-config':
                     - root: pillar
     minion:
-      id: {{ tf_settings.saltmaster_hostname }}
+      id: {{ tf_settings.zone.saltmaster_hostname }}
       startup_states: highstate
       grains:
         role: salt::master

@@ -1,0 +1,15 @@
+
+
+{% set tf_settings = {
+  'vdc': {},
+  'zone': {}
+} %}
+
+{% import_json 'terraform/vdcs.' + salt['grains.item']('vdc') + '.json' as vdc_settings %}
+{% do tf_settingsvdc.update(vdc_settings) %}
+
+{% import_json 'terraform/zones.' + salt['grains.item']('zone') + '.json' as zone_core %}
+{% do tf_settings.zone.update(zone_core) %}
+
+{% import_json 'terraform/zones.' + salt['grains.item']('zone') + '.' + salt['grains.item']('class') + '.json' as zone_class %}
+{% do tf_settings.zone.update(zone_class) %}
