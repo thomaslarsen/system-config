@@ -6,7 +6,7 @@
 } %}
 
 {% import_json 'terraform/vdcs.' + grains['vdc'] + '.json' as vdc_settings %}
-{% do tf_settingsvdc.update(vdc_settings) %}
+{% do tf_settings.vdc.update(vdc_settings) %}
 
 {% import_json 'terraform/zones.' + grains['zone'] + '.json' as zone_core %}
 {% do tf_settings.zone.update(zone_core) %}
