@@ -22,3 +22,6 @@ salt:
       startup_states: highstate
       grains:
         role: salt::master
+        vdc: {{ tf_settings.vdc.vdc_name }}
+        zone: {{ tf_settings.zone.appzone_name }}
+        class: {{ tf_settings.class }}
