@@ -1,8 +1,13 @@
 
 
 {% set tf_settings = {
-  'vdc': {},
-  'zone': {}
+  'class': grains['class'],
+  'vdc': {
+    'vdc_name': grains['vcd']
+  },
+  'zone': {
+    'appzone_name': grains['zone']
+  }
 } %}
 
 {% import_json 'terraform/vdcs.' + grains['vdc'] + '.json' as vdc_settings %}
