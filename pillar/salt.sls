@@ -7,15 +7,15 @@ salt:
         fileserver_backend:
             - git
         gitfs_remotes:
-            - 'file:///srv/git/system-definition':
+            - 'https://github.com/thomaslarsen/system-definition.git':
                 - root: roots
-            - 'file:///srv/salt_root/salt-formula'
+            - 'https://github.com/thomaslarsen/salt-formula.git'
 
         ext_pillar:
             - git:
-                - 'file:///srv/git/resource-config':
+                - 'https://github.com/thomaslarsen/resource-config.git':
                     - root: config
-                - 'file:///srv/git/system-config':
+                - 'https://github.com/thomaslarsen/system-config.git':
                     - root: pillar
     minion:
       id: {{ tf_settings.zone.saltmaster_hostname }}
