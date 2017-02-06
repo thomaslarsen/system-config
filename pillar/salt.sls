@@ -10,6 +10,7 @@ salt:
             - 'https://github.com/thomaslarsen/system-definition.git':
                 - root: roots
             - 'https://github.com/thomaslarsen/salt-formula.git'
+            - 'https://github.com/saltstack-formulas/epel-formula'
 
         ext_pillar:
             - git:
