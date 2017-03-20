@@ -11,6 +11,7 @@ salt:
                 - root: roots
             - 'https://github.com/thomaslarsen/salt-formula.git'
             - 'https://github.com/saltstack-formulas/epel-formula'
+            - 'https://github.com/saltstack-formulas/consul-formula'
 
         ext_pillar:
             - git:
@@ -19,10 +20,11 @@ salt:
                 - 'https://github.com/thomaslarsen/system-config.git':
                     - root: pillar
     minion:
-      id: {{ tf_settings.zone.saltmaster_hostname }}
+      id: {{ tf_settings.zone.saltmaster_hostname }}.{{ tf_settings.zone.appzone_name }}.{{ tf_settings.vpc.vdc_name }}.{{ tf_settings.vpc.root_domain }}
+      master: {{ tf_settings.zone.saltmaster_hostname }}.{{ tf_settings.zone.appzone_name }}.{{ tf_settings.vpc.vdc_name }}.{{ tf_settings.vpc.root_domain }}
       startup_states: highstate
       grains:
-        role: salt::master
+        role: {{ tf_settings.zone.saltmaster_service }}
         vdc: {{ tf_settings.vdc.vdc_name }}
         zone: {{ tf_settings.zone.appzone_name }}
         class: {{ tf_settings.class }}

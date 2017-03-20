@@ -1,3 +1,5 @@
 base:
-  'salt':
+  'saltmaster':
     - salt
+  'vault':
+    - vault
