@@ -12,7 +12,9 @@ vault:
       cert_params:
         CN: {{ tf_settings.vdc.root_domain }}
     config:
-      tls_disable: 1
+      listener:
+        tcp:
+          tls_disable: 1
       backend:
         file:
           path: /var/vault/data
