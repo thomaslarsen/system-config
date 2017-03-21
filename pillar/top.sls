@@ -1,5 +1,6 @@
 base:
   'saltmaster':
     - salt
-  'vault':
+  'role:vault':
+    - match: grain_pcre
     - vault
