@@ -15,6 +15,8 @@ vault:
       listener:
         tcp:
           tls_disable: 1
+          tls_cert_file: /etc/salt/ssl/certs/{{ tf_settings.vdc.root_domain }}.crt
+          tls_key_file: /etc/salt/ssl/certs/{{ tf_settings.vdc.root_domain }}.key
       backend:
         file:
           path: /var/vault/data
