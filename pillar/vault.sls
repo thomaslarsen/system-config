@@ -10,7 +10,7 @@ vault:
     secret_threshold: 2
     ssl:
       cert_params:
-        CN: {{ tf_settings.vdc.root_domain }}
+        - CN: {{ tf_settings.vdc.root_domain }}
     config:
       listener:
         tcp:
