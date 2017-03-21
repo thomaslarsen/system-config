@@ -8,11 +8,11 @@ vault:
       - bdero
     secret_shares: 3
     secret_threshold: 2
-    tls_disable: 1
     ssl:
       cert_params:
         CN: {{ tf_settings.vdc.root_domain }}
     config:
+      tls_disable: 1
       backend:
         file:
           path: /var/vault/data
