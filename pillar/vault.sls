@@ -2,12 +2,13 @@
 
 vault:
   lookup:
-    keybase_users:
-      - renaissancedev
-      - pdpinch
-      - bdero
-    secret_shares: 3
-    secret_threshold: 2
+    init:
+      keybase_users:
+        - renaissancedev
+        - pdpinch
+        - bdero
+      secret_shares: 3
+      secret_threshold: 2
     ssl:
       cert_params:
         CN: {{ tf_settings.vdc.root_domain }}

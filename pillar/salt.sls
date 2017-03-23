@@ -12,6 +12,7 @@ salt:
             - 'https://github.com/thomaslarsen/salt-formula.git'
             - 'https://github.com/saltstack-formulas/epel-formula'
             - 'https://github.com/saltstack-formulas/consul-formula'
+            - 'https://github.com/thomaslarsen/vault-formula.git'
 
         ext_pillar:
             - git:
