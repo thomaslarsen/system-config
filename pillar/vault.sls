@@ -15,6 +15,7 @@ vault:
     listener:
       tcp:
         tls_disable: 1
+        address: 0.0.0.0:{{ tf_settings.zone.vault_port }}
     backend:
       file:
         path: /var/vault/data
