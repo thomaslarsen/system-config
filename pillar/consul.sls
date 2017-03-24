@@ -1,7 +1,7 @@
 consul:
   config:
     server: True
-    bind_addr: "192.168.99.5"
+    bind_addr: "0.0.0.0"
 
     enable_debug: True
     bootstrap_expect: 1
