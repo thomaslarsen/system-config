@@ -1,3 +1,5 @@
+{% from "resourceConfig.jinja" import tf_settings with context %}
+
 consul:
   config:
     server: True

@@ -20,3 +20,6 @@ vault:
     backend:
       file:
         path: /var/vault/data
+    consul:
+      address: 127.0.0.1:8500
+      path: vault
