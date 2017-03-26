@@ -3,10 +3,11 @@
 vault:
   lookup:
     init:
-      keybase_users:
-        - renaissancedev
-        - pdpinch
-        - bdero
+      gpg:
+        keybase:
+          - thomaslarsen
+          - pdpinch
+          - bdero
       secret_shares: 3
       secret_threshold: 2
     ssl:
@@ -19,5 +20,5 @@ vault:
         address: 0.0.0.0:{{ tf_settings.zone.vault_port }}
     backend:
       consul:
-        address: 127.0.0.1:8500
+        address: 127.0.0.1:{{ tf_settings.zone.consul_port }}
         path: vault/

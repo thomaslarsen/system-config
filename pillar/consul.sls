@@ -14,6 +14,6 @@ consul:
     - name: consul
       tags:
         - web
-      port: 8500
+      port: {{ tf_settings.zone.consul_port }}
     - name: dns
       port: 53
