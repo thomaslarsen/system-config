@@ -2,7 +2,7 @@
 
 vault:
   lookup:
-    init:
+    setup:
       gpg:
         keybase:
           - thomaslarsen
