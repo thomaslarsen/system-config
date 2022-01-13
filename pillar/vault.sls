@@ -3,11 +3,12 @@
 vault:
   lookup:
     setup:
-      gpg:
+      unseal_gpg_keys:
         keybase:
           - thomaslarsen
           - pdpinch
           - bdero
+      roottoken_pgp_key: keybase:thomaslarsen
       secret_shares: 3
       secret_threshold: 2
     ssl:
